@@ -1,32 +1,37 @@
-﻿using MauiApp1.Helpers;
+﻿using System;
+using System.IO;
+using Microsoft.Maui;
+using Microsoft.Maui.Controls;
+using MauiApp1.Data;
+using MauiApp1.Views;
 
-namespace MauiApp1
+using MauiApp1.Data;
+
+namespace MauiApp1;
+
+public partial class App : Application
 {
-    public partial class App : Application
+    static Database database;
+
+    public static Database Database
     {
-        static Sqlite_databaseHelper _db;
-
-        public static Sqlite_databaseHelper Db {  get
-            {
-                if (_db ==null)
-                {
-                    string path = Path.Combine(
-                      Environment.GetFolderPath(
-                          Environment.SpecialFolder.LocalApplicationData),
-                      "banco_sqlite_compras.db3");
-
-                    _db = new Sqlite_databaseHelper(path);
-
-                }
-                return _db;
-            }
-        }
-        public App()
+        get
         {
-            InitializeComponent();
+            if (database == null)
+            {
+                string dbPath = Path.Combine(
+                    Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                    "users.db3");
 
-            //MainPage = new AppShell();    
-            MainPage = new NavigationPage( new Views.ListaProduto());
+                database = new Database(dbPath);
+            }
+            return database;
         }
+    }
+
+    public App()
+    {
+        InitializeComponent();
+        MainPage = new NavigationPage(new Views.LoginPage());
     }
 }

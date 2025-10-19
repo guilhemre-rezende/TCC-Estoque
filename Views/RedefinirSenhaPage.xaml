@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.RedefinirSenhaPage"
+             
+             Title="Redefinir senha">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="14" BackgroundColor="#EDEDED">
+
+            <Label Text="Redefinir senha" FontSize="28" HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="#2196F3" CornerRadius="24" Padding="16" HasShadow="False">
+                <VerticalStackLayout Spacing="12">
+                    <Entry x:Name="entryUsuario" Placeholder="Usuário" BackgroundColor="#d3d3d3" />
+                    <Entry x:Name="entryNome" Placeholder="Nome" BackgroundColor="#d3d3d3" />
+                    <Entry x:Name="entrySobrenome" Placeholder="Sobrenome" BackgroundColor="#d3d3d3" />
+                    <Entry x:Name="entryNovaSenha" Placeholder="Nova senha" IsPassword="True" BackgroundColor="#d3d3d3" />
+                    <Entry x:Name="entryConfirmar" Placeholder="Confirmar senha" IsPassword="True" BackgroundColor="#d3d3d3" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Salvar" Clicked="Salvar_Clicked" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="48"/>
+            <Button Text="Voltar" Clicked="Voltar_Clicked" BackgroundColor="#9E9E9E" TextColor="White" CornerRadius="24" HeightRequest="44"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
