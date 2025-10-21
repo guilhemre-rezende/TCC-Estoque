@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiApp1.Views.CadastroPage"
+             x:Class="MauiApp1.Views.CadastroPage"    
+             Title="Cadastro"
              >
     <ScrollView>
         <VerticalStackLayout Padding="24" Spacing="14" BackgroundColor="#EDEDED">
@@ -10,11 +11,11 @@
 
             <Frame BackgroundColor="#00BCD4" CornerRadius="24" Padding="16" HasShadow="False">
                 <VerticalStackLayout Spacing="12">
-                    <Entry x:Name="entryNome" Placeholder="Nome" BackgroundColor="#d3d3d3" />
-                    <Entry x:Name="entrySobrenome" Placeholder="Sobrenome" BackgroundColor="#d3d3d3" />
-                    <Entry x:Name="entryUsuario" Placeholder="Usuário" BackgroundColor="#d3d3d3" />
-                    <Entry x:Name="entrySenha" Placeholder="Senha" IsPassword="True" BackgroundColor="#d3d3d3" />
-                    <Entry x:Name="entryConfirmar" Placeholder="Confirmar senha" IsPassword="True" BackgroundColor="#d3d3d3" />
+                    <Entry x:Name="entryNome" Placeholder="Nome" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
+                    <Entry x:Name="entrySobrenome" Placeholder="Sobrenome" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
+                    <Entry x:Name="entryUsuario" Placeholder="Gmail" BackgroundColor="#d3d3d3" PlaceholderColor="Black" /> 
+                    <Entry x:Name="entrySenha" Placeholder="Senha" IsPassword="True" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
+                    <Entry x:Name="entryConfirmar" Placeholder="Confirmar senha" IsPassword="True" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
                 </VerticalStackLayout>
             </Frame>
 

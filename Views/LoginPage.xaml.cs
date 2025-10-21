@@ -32,22 +32,12 @@ public partial class LoginPage : ContentPage
 
     private async void OnCriarContaClicked(object sender, EventArgs e)
     {
-        var usuario = txtUsuario.Text;
-        var senha = txtSenha.Text;
+        await Navigation.PushAsync(new CadastroPage());
+    }
 
-        if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
-        {
-            await DisplayAlert("Aviso", "Preencha todos os campos!", "OK");
-            return;
-        }
-
-        await App.Database.SaveUserAsync(new Models.User
-        {
-            Username = usuario,
-            Password = senha
-        });
-
-        await DisplayAlert("Sucesso", "Usuário criado!", "OK");
+    private async void OnEsqueceuSenhaClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RedefinirSenhaPage());
     }
 }
 

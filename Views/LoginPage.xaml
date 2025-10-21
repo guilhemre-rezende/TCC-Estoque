@@ -28,6 +28,7 @@
             Placeholder="Usuário"
             BackgroundColor="#E0E0E0"
             HeightRequest="45"
+            PlaceholderColor="Black"
            />
 
         <Entry 
@@ -36,6 +37,7 @@
             IsPassword="True"
             BackgroundColor="#E0E0E0"
             HeightRequest="45"
+            PlaceholderColor="Black"
             />
 
         <CheckBox 
@@ -63,6 +65,7 @@
             <Button Text="Esqueceu a senha?" 
                     BackgroundColor="Transparent"
                     TextColor="Black"
+                    Clicked="OnEsqueceuSenhaClicked"
                />
         </HorizontalStackLayout>
 
