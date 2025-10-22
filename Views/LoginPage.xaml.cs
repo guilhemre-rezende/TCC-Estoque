@@ -39,6 +39,10 @@ public partial class LoginPage : ContentPage
     {
         await Navigation.PushAsync(new RedefinirSenhaPage());
     }
+    private async void Button_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new InicialPage());
+    }
 }
 
 

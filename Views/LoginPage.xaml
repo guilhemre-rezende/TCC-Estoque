@@ -69,5 +69,11 @@
                />
         </HorizontalStackLayout>
 
+        <Button Text="Botão temporario"
+                BackgroundColor="#E91E63" 
+                TextColor="Black"
+                Clicked="Button_Clicked"
+            />
+
     </VerticalStackLayout>
 </ContentPage>
