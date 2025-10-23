@@ -1,0 +1,89 @@
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.RelatorioPage1"
+             Title="RelatorioPage1">
+    <VerticalStackLayout
+        Padding="30" 
+        Spacing="15" 
+        BackgroundColor="#00BCD4">
+
+        <Label 
+            Text="Relatórios de Estoque" 
+            FontSize="35" 
+            HorizontalOptions="Center" 
+            TextColor="White"
+            FontAttributes="Bold"/>
+
+        <Label 
+                Text="Produtos Cadastrados" 
+                FontSize="21"
+                TextColor="Black"/>
+
+        <ListView x:Name="LstProdutosCadastrados">
+            <ListView.Header>
+                <Grid ColumnDefinitions="*,*,*,*,*,*,*" BackgroundColor="#E91E63">
+                    <Label Grid.Column="0" Text="ID" TextColor="White" />
+                    <Label Grid.Column="1" Text="Nome" TextColor="White" />
+                    <Label Grid.Column="2" Text="Descrição" TextColor="White" />
+                    <Label Grid.Column="3" Text="Quantidade" TextColor="White" />
+                    <Label Grid.Column="4" Text="Preço" TextColor="White" />
+                    <Label Grid.Column="5" Text="Data de Cadatro" TextColor="White" />
+                    <Label Grid.Column="6" Text="Quem" TextColor="White" />
+                </Grid>
+            </ListView.Header>
+        </ListView>
+
+        <Button
+            Text="Gerar Relatório"
+            BackgroundColor="#E91E63"
+            TextColor="White"/>
+
+        <Label 
+                Text="Entradas de Produtos" 
+                FontSize="21"
+                TextColor="Black"/>
+
+        <ListView x:Name="LstEntradasProdutos">
+            <ListView.Header>
+                <Grid ColumnDefinitions="*,*,*,*,*" BackgroundColor="#E91E63">
+                    <Label Grid.Column="0" Text="ID Entrada" TextColor="White" />
+                    <Label Grid.Column="1" Text="Produto" TextColor="White" />
+                    <Label Grid.Column="2" Text="Quantidade Adicionada" TextColor="White" />
+                    <Label Grid.Column="3" Text="Data da Entrada" TextColor="White" />
+                    <Label Grid.Column="4" Text="Quem" TextColor="White" />
+                </Grid>
+            </ListView.Header>
+        </ListView>
+
+        <Button
+            Text="Gerar Relatório"
+            BackgroundColor="#E91E63"
+            TextColor="White"/>
+
+        <Label 
+                Text="Saídas de Produtos" 
+                FontSize="21"
+                TextColor="Black"/>
+
+        <ListView x:Name="LstSaidasProdutos">
+            <ListView.Header>
+                <Grid ColumnDefinitions="*,*,*,*,*" BackgroundColor="#E91E63">
+                    <Label Grid.Column="0" Text="ID Saída" TextColor="White" />
+                    <Label Grid.Column="1" Text="Produto" TextColor="White" />
+                    <Label Grid.Column="2" Text="Quantidade Retirada" TextColor="White" />
+                    <Label Grid.Column="3" Text="Data da Saída" TextColor="White" />
+                    <Label Grid.Column="4" Text="Quem" TextColor="White" />
+                </Grid>
+            </ListView.Header>
+        </ListView>
+
+        <Button
+            Text="Gerar Relatório"
+            BackgroundColor="#E91E63"
+            TextColor="White"/>
+
+        <Button Text="Voltar ao Início" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="44"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -5,22 +5,22 @@
              Title="Cadastro"
              >
     <ScrollView>
-        <VerticalStackLayout Padding="24" Spacing="14" BackgroundColor="#EDEDED">
+        <VerticalStackLayout Padding="24" Spacing="14" BackgroundColor="#00BCD4">
 
-            <Label Text="Cadastro" FontSize="28" HorizontalOptions="Center" />
+            <Label Text="Cadastro" FontSize="28" HorizontalOptions="Center" TextColor="White" />
 
             <Frame BackgroundColor="#00BCD4" CornerRadius="24" Padding="16" HasShadow="False">
                 <VerticalStackLayout Spacing="12">
-                    <Entry x:Name="entryNome" Placeholder="Nome" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
-                    <Entry x:Name="entrySobrenome" Placeholder="Sobrenome" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
-                    <Entry x:Name="entryUsuario" Placeholder="Gmail" BackgroundColor="#d3d3d3" PlaceholderColor="Black" /> 
-                    <Entry x:Name="entrySenha" Placeholder="Senha" IsPassword="True" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
-                    <Entry x:Name="entryConfirmar" Placeholder="Confirmar senha" IsPassword="True" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
+                    <Entry x:Name="entryNome" Placeholder="Nome" BackgroundColor="White" PlaceholderColor="Black" />
+                    <Entry x:Name="entrySobrenome" Placeholder="Sobrenome" BackgroundColor="White" PlaceholderColor="Black" />
+                    <Entry x:Name="entryUsuario" Placeholder="Gmail" BackgroundColor="White" PlaceholderColor="Black" /> 
+                    <Entry x:Name="entrySenha" Placeholder="Senha" IsPassword="True" BackgroundColor="White" PlaceholderColor="Black" />
+                    <Entry x:Name="entryConfirmar" Placeholder="Confirmar senha" IsPassword="True" BackgroundColor="White" PlaceholderColor="Black" />
                 </VerticalStackLayout>
             </Frame>
 
             <Button Text="Salvar" Clicked="Salvar_Clicked" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="48"/>
-            <Button Text="Voltar" Clicked="Voltar_Clicked" BackgroundColor="#9E9E9E" TextColor="White" CornerRadius="24" HeightRequest="44"/>
+            <Button Text="Voltar" Clicked="Voltar_Clicked" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="44"/>
 
         </VerticalStackLayout>
     </ScrollView>

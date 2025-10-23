@@ -10,7 +10,7 @@
         
         <Label 
             Text="Coletix" 
-            FontSize="36" 
+            FontSize="35" 
             HorizontalOptions="Center" 
             TextColor="White"
             FontAttributes="Bold"/>
@@ -24,20 +24,28 @@
             <Button
                 Text="Cadastro Produtos"
                 BackgroundColor="#E91E63"
-                TextColor="White"/>
+                TextColor="White"
+                Clicked="BtnCadastroProdutoPage"/>
             <Button
                 Text="Entrada de Produtos"
                 BackgroundColor="#E91E63"
-                TextColor="White"/>
+                TextColor="White"
+                Clicked="BtnEntradaProdutoPage"/>
             <Button
                 Text="Saída de Produtos"
                 BackgroundColor="#E91E63"
-                TextColor="White"/>
+                TextColor="White"
+                Clicked="BtnSaidaProdutoPage"/>
             <Button
-                Text="Relarórios"
+                Text="Relatórios"
+                BackgroundColor="#E91E63"
+                TextColor="White"
+                Clicked="BtnRelatorioPage"/>
+            <Button
+                Text="configurações"
                 BackgroundColor="#E91E63"
                 TextColor="White"/>
-
+            
         </HorizontalStackLayout>
 
         <Label 
@@ -49,12 +57,11 @@
 
         <ListView x:Name="lst_produtos">
             <ListView.Header>
-                <Grid ColumnDefinitions="*,*,*,*,*">
-                    <Label Grid.Column="0" Text="ID" />
+                <Grid ColumnDefinitions="*,*,*,*">
+                    <Label Grid.Column="0" Text="Nome" />
                     <Label Grid.Column="1" Text="Descrição" />
                     <Label Grid.Column="2" Text="Preço" />
                     <Label Grid.Column="3" Text="Qnt" />
-                    <Label Grid.Column="4" Text="Total" />
                 </Grid>
             </ListView.Header>
         </ListView>

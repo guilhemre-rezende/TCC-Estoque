@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.SaidaProdutoPage1"
+             Title="SaidaProdutoPage1">
+    <VerticalStackLayout Padding="24" Spacing="14" BackgroundColor="#00BCD4">
+
+        <Label Text="Retirar do Estoque" FontSize="28" HorizontalOptions="Center" />
+
+        <Frame BackgroundColor="#00BCD4" CornerRadius="24" Padding="16" HasShadow="False">
+            <VerticalStackLayout Spacing="12">
+                <Label Text="Produto:" FontSize="21" />
+                <Picker x:Name="EscolhaProduto" TextColor="Black" BackgroundColor="White" SelectedIndexChanged="OnSelecionarOpcao" />
+                <Label Text="Quantidade:" FontSize="21" />
+                <Entry x:Name="entrySenha" Placeholder="Ex: 10 caixas" BackgroundColor="White" PlaceholderColor="Black" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Button Text="Registrar Saída" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="48"/>
+        <Button Text="Voltar ao Início" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="44"/>
+
+    </VerticalStackLayout>
+</ContentPage>

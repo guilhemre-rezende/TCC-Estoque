@@ -11,42 +11,57 @@
 
         <Label 
             Text="Coletix" 
-            FontSize="36" 
+            FontSize="35" 
             HorizontalOptions="Center" 
             TextColor="White"
             FontAttributes="Bold"/>
 
         <Label 
             Text="Login" 
-            FontSize="24" 
+            FontSize="28" 
             HorizontalOptions="Center"
             TextColor="Black"
             Margin="0,20,0,0"/>
 
+        <Label 
+            Text="Usuário" 
+            FontSize="21" 
+            TextColor="Black"
+            Margin="0,20,0,0"/>
+        
         <Entry 
             x:Name="txtUsuario"
-            Placeholder="Usuário"
+            Placeholder="Ex: João"
             BackgroundColor="#E0E0E0"
             HeightRequest="45"
             PlaceholderColor="Black"
            />
-
+        
+        <Label 
+            Text="Senha" 
+            FontSize="21" 
+            TextColor="Black"
+            Margin="0,20,0,0"/>
+        
         <Entry 
             x:Name="txtSenha"
-            Placeholder="Senha"
+            Placeholder="Ex: Jo@o007"
             IsPassword="True"
             BackgroundColor="#E0E0E0"
             HeightRequest="45"
             PlaceholderColor="Black"
             />
 
+        <Label 
+            Text="Lembrar de mim:" 
+            VerticalOptions="Center" 
+            FontSize="14" 
+            TextColor="Black"/>
+        
         <CheckBox 
             x:Name="chkLembrar"
             HorizontalOptions="Start"/>
-        <Label 
-            Text="Lembrar de mim" 
-            VerticalOptions="Center"/>
-
+        
         <Button 
             Text="Entrar" 
             BackgroundColor="#E91E63" 
@@ -59,19 +74,19 @@
             Spacing="20"
             Margin="0,10,0,0">
             <Button Text="Criar conta" 
-                    BackgroundColor="Transparent" 
-                    TextColor="Black"
+                    BackgroundColor="#E91E63" 
+                    TextColor="White"
                     Clicked="OnCriarContaClicked"/>
             <Button Text="Esqueceu a senha?" 
-                    BackgroundColor="Transparent"
-                    TextColor="Black"
+                    BackgroundColor="#E91E63"
+                    TextColor="White"
                     Clicked="OnEsqueceuSenhaClicked"
                />
         </HorizontalStackLayout>
 
         <Button Text="Botão temporario"
                 BackgroundColor="#E91E63" 
-                TextColor="Black"
+                TextColor="White"
                 Clicked="Button_Clicked"
             />
 
