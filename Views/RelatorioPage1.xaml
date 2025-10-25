@@ -83,7 +83,7 @@
             BackgroundColor="#E91E63"
             TextColor="White"/>
 
-        <Button Text="Voltar ao Início" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="44"/>
+        <Button Text="Voltar ao Início" BackgroundColor="#E91E63" TextColor="White" CornerRadius="24" HeightRequest="44"/>
 
     </VerticalStackLayout>
 </ContentPage>

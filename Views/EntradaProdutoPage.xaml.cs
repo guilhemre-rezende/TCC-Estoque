@@ -6,4 +6,9 @@ public partial class EntradaProdutoPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void EscolhaProduto_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+    }
 }

@@ -10,7 +10,7 @@
         <Frame BackgroundColor="#00BCD4" CornerRadius="24" Padding="16" HasShadow="False">
             <VerticalStackLayout Spacing="12">
                 <Label Text="Produto:" FontSize="21" />
-                <Picker x:Name="EscolhaProduto" TextColor="Black" BackgroundColor="White" SelectedIndexChanged="OnSelecionarOpcao" />
+                <Picker />
                 <Label Text="Quantidade:" FontSize="21" />
                 <Entry x:Name="entrySenha" Placeholder="Ex: 10 caixas" BackgroundColor="White" PlaceholderColor="Black" />
             </VerticalStackLayout>
