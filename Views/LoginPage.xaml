@@ -28,7 +28,7 @@
             FontSize="21" 
             TextColor="Black"
             Margin="0,20,0,0"/>
-        
+
         <Entry 
             x:Name="txtUsuario"
             Placeholder="Ex: João"
@@ -36,13 +36,13 @@
             HeightRequest="45"
             PlaceholderColor="Black"
            />
-        
+
         <Label 
             Text="Senha" 
             FontSize="21" 
             TextColor="Black"
             Margin="0,20,0,0"/>
-        
+
         <Entry 
             x:Name="txtSenha"
             Placeholder="Ex: Jo@o007"
@@ -57,11 +57,11 @@
             VerticalOptions="Center" 
             FontSize="14" 
             TextColor="Black"/>
-        
+
         <CheckBox 
             x:Name="chkLembrar"
             HorizontalOptions="Start"/>
-        
+
         <Button 
             Text="Entrar" 
             BackgroundColor="#E91E63" 
@@ -80,15 +80,7 @@
             <Button Text="Esqueceu a senha?" 
                     BackgroundColor="#E91E63"
                     TextColor="White"
-                    Clicked="OnEsqueceuSenhaClicked"
-               />
+                    Clicked="OnEsqueceuSenhaClicked"/>
         </HorizontalStackLayout>
-
-        <Button Text="Botão temporario"
-                BackgroundColor="#E91E63" 
-                TextColor="White"
-                Clicked="Button_Clicked"
-            />
-
     </VerticalStackLayout>
 </ContentPage>
