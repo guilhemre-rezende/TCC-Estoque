@@ -10,14 +10,19 @@
         <Frame BackgroundColor="#00BCD4" CornerRadius="24" Padding="16" HasShadow="False">
             <VerticalStackLayout Spacing="12">
                 <Label Text="Produto:" FontSize="21" />
-                <Picker />
+
+                <!--Picker usado para mostrar a lista de produtos que vão ser retirados -->
+                <Picker x:Name="pickerprodutos"   
+                        Title="Selecione o produto"
+                        ItemDisplayBinding="{Binding Nome}"/>
                 <Label Text="Quantidade:" FontSize="21" />
-                <Entry x:Name="entrySenha" Placeholder="Ex: 10 caixas" BackgroundColor="White" PlaceholderColor="Black" />
+                
+                <Entry x:Name="entryquantidade" Placeholder="Ex: 10 caixas" BackgroundColor="White" PlaceholderColor="Black" />
             </VerticalStackLayout>
         </Frame>
-
-        <Button Text="Registrar Saída" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="48"/>
-        <Button Text="Voltar ao Início" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="44"/>
+        <!--Criação de botões para registar Saida produtos e para voltar para a página Inicial -->
+        <Button Text="Registrar Saída" Clicked="SaidaProduto_Clicked" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="48"/>
+        <Button Text="Voltar ao Início" Clicked="PaginaInicial_Clicked" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="44"/>
 
     </VerticalStackLayout>
 </ContentPage>
