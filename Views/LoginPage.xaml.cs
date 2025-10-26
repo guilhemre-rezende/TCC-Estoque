@@ -21,6 +21,9 @@ public partial class LoginPage : ContentPage
         if (user != null)
         {
             await DisplayAlert("Sucesso", $"Bem-vindo, {user.Username}!", "OK");
+            
+            //Voltar para a página inicial
+            Application.Current.MainPage = new NavigationPage(new InicialPage());
         }
         else
         {

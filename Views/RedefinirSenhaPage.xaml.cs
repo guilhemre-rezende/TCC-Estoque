@@ -14,28 +14,19 @@ namespace MauiApp1.Views
         private async void Salvar_Clicked(object sender, EventArgs e)
         {
             string usuarioNome = entryUsuario.Text?.Trim();
-            string nome = entryNome.Text?.Trim();
-            string sobrenome = entrySobrenome.Text?.Trim();
-            string novaSenha = entryNovaSenha.Text ?? string.Empty;
-            string confirmar = entryConfirmar.Text ?? string.Empty;
 
-            if (string.IsNullOrEmpty(usuarioNome) || string.IsNullOrEmpty(novaSenha))
+            if (string.IsNullOrEmpty(usuarioNome))
             {
-                await DisplayAlert("Atenção", "Preencha usuário e nova senha.", "OK");
+                await DisplayAlert("Atenção", "Informe o Email de usuário", "OK");
                 return;
             }
 
-        
+            await DisplayAlert("Sucesso", $"Uma senha temporária foi enviada para o e-mail de {usuarioNome}.", "OK");
 
-           
-
-            if (novaSenha != confirmar)
-            {
-                await DisplayAlert("Erro", "As senhas não coincidem.", "OK");
-                return;
-            }
+            entryUsuario.Text = string.Empty;
 
         }
+
 
         private async void Voltar_Clicked(object sender, EventArgs e)
         {

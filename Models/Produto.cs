@@ -11,9 +11,10 @@ namespace MauiApp1.Models
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
+        public string Nome { get; set; }
         public string Descricao { get; set; }
         public double Quantidade {get; set;}
-        public double preco { get; set; }
-        public double Total { get => Quantidade * preco; }
+        public double Preco { get; set; }
+        public double Total { get => Quantidade * Preco; }
     }
 }

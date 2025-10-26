@@ -13,7 +13,7 @@
                 <VerticalStackLayout Spacing="12">
                     <Entry x:Name="entryNome" Placeholder="Nome" BackgroundColor="White" PlaceholderColor="Black" />
                     <Entry x:Name="entrySobrenome" Placeholder="Sobrenome" BackgroundColor="White" PlaceholderColor="Black" />
-                    <Entry x:Name="entryUsuario" Placeholder="Gmail" BackgroundColor="White" PlaceholderColor="Black" /> 
+                    <Entry x:Name="entryUsuario" Placeholder="Email" BackgroundColor="White" PlaceholderColor="Black" /> 
                     <Entry x:Name="entrySenha" Placeholder="Senha" IsPassword="True" BackgroundColor="White" PlaceholderColor="Black" />
                     <Entry x:Name="entryConfirmar" Placeholder="Confirmar senha" IsPassword="True" BackgroundColor="White" PlaceholderColor="Black" />
                 </VerticalStackLayout>

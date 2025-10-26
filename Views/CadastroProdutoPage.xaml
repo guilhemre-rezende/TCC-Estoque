@@ -13,16 +13,16 @@
                     <Label Text="Nome do Produto:" FontSize="21" />
                     <Entry x:Name="entryNomeProduto" Placeholder="Ex: Leite" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
                     <Label Text="Descrição (opcional):" FontSize="21" />
-                    <Editor x:Name="entrySobrenome" Placeholder="Ex: Leite fresco de alta qualidade." BackgroundColor="#d3d3d3" PlaceholderColor="Black" HeightRequest="100" />
+                    <Editor x:Name="entryDescricao" Placeholder="Ex: Leite fresco de alta qualidade." BackgroundColor="#d3d3d3" PlaceholderColor="Black" HeightRequest="100" />
                     <Label Text="Quantidade:" FontSize="21" />
-                    <Entry x:Name="entryUsuario" Placeholder="Ex: 20 Caixas" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
+                    <Entry x:Name="entryQuantidade" Placeholder="Ex: 20 Caixas" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
                     <Label Text="Preço da unidade (R$):" FontSize="21" />
-                    <Entry x:Name="entrySenha" Placeholder="Ex: R$7,90" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
+                    <Entry x:Name="entryPreco" Placeholder="Ex: R$7,90" BackgroundColor="#d3d3d3" PlaceholderColor="Black" />
                 </VerticalStackLayout>
             </Frame>
 
-            <Button Text="Cadastrar Produto" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="48"/>
-            <Button Text="Voltar ao Início" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="44"/>
+            <Button Text="Cadastrar Produto" Clicked="Cadastar_Clicked"  BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="48"/>
+            <Button Text="Voltar ao Início"  Clicked="Voltar_Clicked" BackgroundColor="#F06277" TextColor="White" CornerRadius="24" HeightRequest="44"/>
 
         </VerticalStackLayout>
     </ScrollView>

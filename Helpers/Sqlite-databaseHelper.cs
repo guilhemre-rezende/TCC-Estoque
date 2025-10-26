@@ -27,7 +27,7 @@ namespace MauiApp1.Helpers
                          "Preco=? WHERE Id=?";
 
             return _conn.QueryAsync<Produto>(
-                sql, p.Descricao, p.Quantidade, p.preco, p.Id
+                sql, p.Descricao, p.Quantidade, p.Preco, p.Id
             );
         }
 

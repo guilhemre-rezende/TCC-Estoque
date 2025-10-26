@@ -5,8 +5,6 @@ using Microsoft.Maui.Controls;
 using MauiApp1.Data;
 using MauiApp1.Views;
 
-using MauiApp1.Data;
-
 namespace MauiApp1;
 
 public partial class App : Application

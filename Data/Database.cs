@@ -17,7 +17,8 @@ namespace MauiApp1.Data
             {
                 _database = new SQLiteAsyncConnection(dbPath);
                 _database.CreateTableAsync<User>().Wait();
-            }
+                _database.CreateTableAsync<Produto>().Wait();
+        }
 
             public Task<List<User>> GetUsersAsync()
             {
@@ -35,5 +36,32 @@ namespace MauiApp1.Data
                     .Where(u => u.Username == username && u.Password == password)
                     .FirstOrDefaultAsync();
             }
+        public Task<List<Produto>> GetProdutosAsync()
+        {
+            return _database.Table<Produto>().ToListAsync();
+        }
+
+        public Task<int> SaveProdutoAsync(Produto produto)
+        {
+            return _database.InsertAsync(produto);
+        }
+
+        public Task<int> UpdateProdutoAsync(Produto produto)
+        {
+            return _database.UpdateAsync(produto);
+        }
+
+        public Task<int> DeleteProdutoAsync(Produto produto)
+        {
+            return _database.DeleteAsync(produto);
+        }
+
+        public Task<Produto> GetProdutoByIdAsync(int id)
+        {
+            return _database.Table<Produto>()
+                .Where(p => p.Id == id)
+                .FirstOrDefaultAsync();
         }
     }
+}
+ 
