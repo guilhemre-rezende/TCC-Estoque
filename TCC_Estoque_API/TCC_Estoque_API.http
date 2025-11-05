@@ -1,0 +1,6 @@
+@TCC_Estoque_API_HostAddress = http://localhost:5299
+
+GET {{TCC_Estoque_API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

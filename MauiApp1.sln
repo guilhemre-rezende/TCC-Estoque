@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35728.132 d17.12
+VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiApp1", "MauiApp1.csproj", "{BE70BF55-8D8F-4B84-912F-7DC75C43EF97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCC_Estoque_API", "TCC_Estoque_API\TCC_Estoque_API.csproj", "{EE4BC3C6-E68C-6026-1811-B659E3A681D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +19,15 @@ Global
 		{BE70BF55-8D8F-4B84-912F-7DC75C43EF97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE70BF55-8D8F-4B84-912F-7DC75C43EF97}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BE70BF55-8D8F-4B84-912F-7DC75C43EF97}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EE4BC3C6-E68C-6026-1811-B659E3A681D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4BC3C6-E68C-6026-1811-B659E3A681D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4BC3C6-E68C-6026-1811-B659E3A681D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4BC3C6-E68C-6026-1811-B659E3A681D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDD132A0-2622-4D5D-AA6F-6833CFF94476}
 	EndGlobalSection
 EndGlobal
