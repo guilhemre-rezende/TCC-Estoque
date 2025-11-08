@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+	<!-- Define que a segurança de rede é ativada para todo o tráfego -->
+	<base-config>
+		<trust-anchors>
+			<certificates src="system" />
+			<certificates src="user" />
+		</trust-anchors>
+	</base-config>
+
+	<!-- Configuração para o tráfego de depuração -->
+	<domain-config cleartextTrafficPermitted="true">
+		<!-- Permite tráfego HTTP para o endereço do emulador Android (seu PC) -->
+		<domain includeSubdomains="true">10.0.2.2</domain>
+		<!-- Se você usar o IP da sua máquina na rede local (ex: 192.168.1.10) use: <domain includeSubdomains="true">192.168.1.0/24</domain> -->
+	</domain-config>
+</network-security-config>

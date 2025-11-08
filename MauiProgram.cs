@@ -2,6 +2,7 @@
 using MauiApp1.Services;
 using MauiApp1.Views;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Http;
 
 namespace MauiApp1
 {
@@ -18,22 +19,24 @@ namespace MauiApp1
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            // URL de base para o Android (10.0.2.2 é o IP do host)
+            const string BaseUrl = "http://10.0.2.2:5299";
+
             // --- REGISTRO DE SERVIÇOS PARA INJEÇÃO DE DEPENDÊNCIA ---
 
-            // 1. REGISTRO CHAVE: HttpClient
-            // Agora o MAUI sabe como criar um objeto HttpClient, que é injetado no AuthService.
-            builder.Services.AddSingleton<HttpClient>();
+            // CORREÇÃO CRÍTICA: Registra o AuthService e configura seu HttpClient
+            // O AddHttpClient garante que o BaseAddress seja setado ANTES de ser injetado no construtor do AuthService.
+            builder.Services.AddHttpClient<AuthService>(client =>
+            {
+                client.BaseAddress = new Uri(BaseUrl);
+                client.Timeout = TimeSpan.FromSeconds(5); // Timeout para evitar esperas longas
+            });
 
-            // 2. Serviço de Comunicação com a API (Singleton)
-            // O AuthService agora consegue o HttpClient injetado.
-            builder.Services.AddSingleton<AuthService>();
-
-            // 3. Páginas que usam injeção no construtor
-            // A LoginPage precisa ser registrada (usada no App.xaml.cs)
+            // 2. Páginas que usam injeção no construtor
             builder.Services.AddSingleton<LoginPage>();
-
-            // Registramos a página de Cadastro
             builder.Services.AddTransient<CadastroPage>();
+            // Adicione outras páginas que usam injeção aqui (Ex: RedefinirSenhaPage)
+            // builder.Services.AddTransient<RedefinirSenhaPage>(); 
 
             // --------------------------------------------------------
 
